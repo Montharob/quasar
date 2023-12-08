@@ -17,10 +17,10 @@
 <q-input
         filled
         v-model="name"
-        label="`你的名字 *"
-        hint="名和姓"
+        label="`ชื่อ-สกุล *"
+        hint="ชื่อและนามสกุล"
         lazy-rules
-        :rules="[ val => val && val.length > 0 || '请输入一些内容']"
+        :rules="[ val => val && val.length > 0 || 'กรุณากรอกชื่อและนามสกุล']"
       />
  <q-input
         filled
@@ -61,7 +61,6 @@ import { ref } from 'vue'
 export default {
   setup () {
     const $q = useQuasar()
-
     const name = ref(null)
     const age = ref(null)
     const accept = ref(false)
